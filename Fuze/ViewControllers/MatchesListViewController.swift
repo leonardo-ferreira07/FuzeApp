@@ -125,11 +125,17 @@ extension MatchesListViewController: ViewCode {
     }
     
     func setupAdditionalConfiguration() {
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        navigationController?.navigationBar.largeTitleTextAttributes = textAttributes
+        let mainColor = UIColor(hexString: "#161621")
+        
         title = "Partidas"
-        view.backgroundColor = UIColor(hexString: "#161621")
+        view.backgroundColor = mainColor
+        
+        let appearance = UINavigationBarAppearance(idiom: .phone)
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.backgroundColor = mainColor
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
     }
     
 }
