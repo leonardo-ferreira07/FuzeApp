@@ -26,6 +26,7 @@
 		A71A6BA529B1260400A08976 /* MatchListNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BA429B1260400A08976 /* MatchListNetworkRequest.swift */; };
 		A71A6BA829B1262D00A08976 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BA729B1262D00A08976 /* URLConstants.swift */; };
 		A71A6BAA29B1289300A08976 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BA929B1289300A08976 /* Constants.swift */; };
+		A71A6BAC29B12B3F00A08976 /* FuzeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BAB29B12B3F00A08976 /* FuzeNavigationController.swift */; };
 		A76B491229B116C000712046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B491129B116C000712046 /* AppDelegate.swift */; };
 		A76B491429B116C000712046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B491329B116C000712046 /* SceneDelegate.swift */; };
 		A76B491929B116C000712046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76B491729B116C000712046 /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 		A71A6BA429B1260400A08976 /* MatchListNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequest.swift; sourceTree = "<group>"; };
 		A71A6BA729B1262D00A08976 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		A71A6BA929B1289300A08976 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A71A6BAB29B12B3F00A08976 /* FuzeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzeNavigationController.swift; sourceTree = "<group>"; };
 		A76B490E29B116C000712046 /* Fuze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76B491129B116C000712046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A76B491329B116C000712046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				A71A6B9D29B1220600A08976 /* Models */,
 				A71A6B8929B1195400A08976 /* Networking */,
 				A71A6B8229B1188F00A08976 /* Extensions */,
+				A71A6BAB29B12B3F00A08976 /* FuzeNavigationController.swift */,
 				A71A6B9B29B11C2D00A08976 /* ViewCode.swift */,
 				A76B491129B116C000712046 /* AppDelegate.swift */,
 				A76B491329B116C000712046 /* SceneDelegate.swift */,
@@ -380,6 +383,7 @@
 				A71A6B9A29B11BDE00A08976 /* UIColorExtensions.swift in Sources */,
 				A71A6B9C29B11C2D00A08976 /* ViewCode.swift in Sources */,
 				A71A6B8629B118AA00A08976 /* StringExtensions.swift in Sources */,
+				A71A6BAC29B12B3F00A08976 /* FuzeNavigationController.swift in Sources */,
 				A71A6B9329B1196D00A08976 /* URLMethod.swift in Sources */,
 				A71A6B8829B118AA00A08976 /* URLRequestExtensions.swift in Sources */,
 				A76B491229B116C000712046 /* AppDelegate.swift in Sources */,
