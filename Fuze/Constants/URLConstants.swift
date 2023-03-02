@@ -9,4 +9,5 @@ import Foundation
 
 struct URLConstants {
     static let matchesURL = "https://api.pandascore.co/csgo/matches/upcoming"
+    static let teamsURL = "https://api.pandascore.co/csgo/teams"
 }
