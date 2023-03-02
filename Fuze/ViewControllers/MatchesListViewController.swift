@@ -13,11 +13,14 @@ class MatchesListViewController: UIViewController {
     
     // MARK: - Properties
     
+    let viewModel: MatchListViewModel
+    
     // MARK: - Initializers
     
-    init() {
-        super.init(nibName: nil, bundle: nil)
+    init(viewModel: MatchListViewModel) {
+        self.viewModel = viewModel
         
+        super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
@@ -30,6 +33,10 @@ class MatchesListViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor(hexString: "#161621")
+        
+        viewModel.fetchMatches { result in
+            
+        }
     }
 
 }
