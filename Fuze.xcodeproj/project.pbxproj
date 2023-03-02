@@ -38,6 +38,7 @@
 		A71A6BC029B151E500A08976 /* TeamNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BBF29B151E500A08976 /* TeamNetworkRequest.swift */; };
 		A71A6BC229B152AD00A08976 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BC129B152AD00A08976 /* Team.swift */; };
 		A71A6BC429B1534D00A08976 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BC329B1534D00A08976 /* TeamViewModel.swift */; };
+		A71A6BC629B155AD00A08976 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BC529B155AD00A08976 /* MatchViewController.swift */; };
 		A76B491229B116C000712046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B491129B116C000712046 /* AppDelegate.swift */; };
 		A76B491429B116C000712046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B491329B116C000712046 /* SceneDelegate.swift */; };
 		A76B491929B116C000712046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76B491729B116C000712046 /* Main.storyboard */; };
@@ -95,6 +96,7 @@
 		A71A6BBF29B151E500A08976 /* TeamNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNetworkRequest.swift; sourceTree = "<group>"; };
 		A71A6BC129B152AD00A08976 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		A71A6BC329B1534D00A08976 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		A71A6BC529B155AD00A08976 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		A76B490E29B116C000712046 /* Fuze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76B491129B116C000712046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A76B491329B116C000712046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				A71A6B9729B11ABC00A08976 /* MatchesListViewController.swift */,
+				A71A6BC529B155AD00A08976 /* MatchViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A71A6BC629B155AD00A08976 /* MatchViewController.swift in Sources */,
 				A71A6B9429B1196D00A08976 /* NetworkRequester.swift in Sources */,
 				A71A6BAA29B1289300A08976 /* Constants.swift in Sources */,
 				A71A6BC429B1534D00A08976 /* TeamViewModel.swift in Sources */,

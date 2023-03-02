@@ -16,12 +16,14 @@ class TeamViewModel {
     
     private(set) var team1: Team?
     private(set) var team2: Team?
+    private(set) var match: Match?
     
     // MARK: - Init
-    init<S: NetworkProtocol>(service: S, firstTeamId: Int, secondTeamId: Int) {
+    init<S: NetworkProtocol>(service: S, match: Match) {
         self.service = service
-        self.team1Request = TeamNetworkRequest(teamId: "\(firstTeamId)")
-        self.team2Request = TeamNetworkRequest(teamId: "\(secondTeamId)")
+        self.match = match
+        self.team1Request = TeamNetworkRequest(teamId: "\(match.opponents?.first?.opponent?.id ?? 0)")
+        self.team2Request = TeamNetworkRequest(teamId: "\(match.opponents?.last?.opponent?.id ?? 0)")
     }
     
     // MARK: - Fetch data
@@ -29,11 +31,11 @@ class TeamViewModel {
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()
-        service.performRequest(team1Request) { [weak self] (result: Result<Team>) in
+        service.performRequest(team1Request) { [weak self] (result: Result<[Team]>) in
             switch result {
             case .success(let team):
                 print(team)
-                self?.team2 = team
+                self?.team2 = team.first
             case .failure(let error):
                 print(error)
             }
@@ -42,11 +44,11 @@ class TeamViewModel {
         }
         
         dispatchGroup.enter()
-        service.performRequest(team2Request) { [weak self] (result: Result<Team>) in
+        service.performRequest(team2Request) { [weak self] (result: Result<[Team]>) in
             switch result {
             case .success(let team):
                 print(team)
-                self?.team1 = team
+                self?.team1 = team.first
             case .failure(let error):
                 print(error)
             }
