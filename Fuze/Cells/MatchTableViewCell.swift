@@ -176,6 +176,7 @@ class MatchTableViewCell: UITableViewCell, Reusable {
         opponent1Label.text = opponent1?.name
         opponent2Label.text = opponent2?.name
         leagueLabel.text = (match.league?.name ?? "") + " " + (match.serie?.fullName ?? "")
+        timeLabel.text = Date.convertToFuzeDate(match.beginAt ?? "")
     }
 
 }
