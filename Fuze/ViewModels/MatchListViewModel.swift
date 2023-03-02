@@ -12,6 +12,7 @@ class MatchListViewModel {
     // MARK: - Properties
     private let matchesRequest: RequestProtocol
     private let service: NetworkProtocol
+    private(set) var matches: [Match] = []
     
     // MARK: - Init
     init<S: NetworkProtocol>(service: S) {
@@ -24,7 +25,7 @@ class MatchListViewModel {
         service.performRequest(matchesRequest) { [weak self] (result: Result<[Match]>) in
             switch result {
             case .success(let matchesArray):
-                print(matchesArray)
+                self?.matches = matchesArray
                 completion(Result.success(true))
             case .failure(let error):
                 print(error)
