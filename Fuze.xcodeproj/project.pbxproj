@@ -27,6 +27,13 @@
 		A71A6BA829B1262D00A08976 /* URLConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BA729B1262D00A08976 /* URLConstants.swift */; };
 		A71A6BAA29B1289300A08976 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BA929B1289300A08976 /* Constants.swift */; };
 		A71A6BAC29B12B3F00A08976 /* FuzeNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BAB29B12B3F00A08976 /* FuzeNavigationController.swift */; };
+		A71A6BAF29B12FDF00A08976 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BAE29B12FDF00A08976 /* MatchTableViewCell.swift */; };
+		A71A6BB729B13B9700A08976 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BB129B13B9700A08976 /* UICollectionView+Reusable.swift */; };
+		A71A6BB829B13B9700A08976 /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BB229B13B9700A08976 /* ObjectAssociation.swift */; };
+		A71A6BB929B13B9700A08976 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BB329B13B9700A08976 /* Reusable.swift */; };
+		A71A6BBA29B13B9700A08976 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BB429B13B9700A08976 /* UITableView+Reusable.swift */; };
+		A71A6BBB29B13B9700A08976 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BB529B13B9700A08976 /* NibLoadable.swift */; };
+		A71A6BBC29B13B9700A08976 /* NibOwnerLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BB629B13B9700A08976 /* NibOwnerLoadable.swift */; };
 		A76B491229B116C000712046 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B491129B116C000712046 /* AppDelegate.swift */; };
 		A76B491429B116C000712046 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B491329B116C000712046 /* SceneDelegate.swift */; };
 		A76B491929B116C000712046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76B491729B116C000712046 /* Main.storyboard */; };
@@ -73,6 +80,13 @@
 		A71A6BA729B1262D00A08976 /* URLConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstants.swift; sourceTree = "<group>"; };
 		A71A6BA929B1289300A08976 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A71A6BAB29B12B3F00A08976 /* FuzeNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzeNavigationController.swift; sourceTree = "<group>"; };
+		A71A6BAE29B12FDF00A08976 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		A71A6BB129B13B9700A08976 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		A71A6BB229B13B9700A08976 /* ObjectAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
+		A71A6BB329B13B9700A08976 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		A71A6BB429B13B9700A08976 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		A71A6BB529B13B9700A08976 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		A71A6BB629B13B9700A08976 /* NibOwnerLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibOwnerLoadable.swift; sourceTree = "<group>"; };
 		A76B490E29B116C000712046 /* Fuze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fuze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76B491129B116C000712046 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A76B491329B116C000712046 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -179,6 +193,27 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		A71A6BAD29B12DC500A08976 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A71A6BAE29B12FDF00A08976 /* MatchTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A71A6BB029B13B9700A08976 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				A71A6BB129B13B9700A08976 /* UICollectionView+Reusable.swift */,
+				A71A6BB229B13B9700A08976 /* ObjectAssociation.swift */,
+				A71A6BB329B13B9700A08976 /* Reusable.swift */,
+				A71A6BB429B13B9700A08976 /* UITableView+Reusable.swift */,
+				A71A6BB529B13B9700A08976 /* NibLoadable.swift */,
+				A71A6BB629B13B9700A08976 /* NibOwnerLoadable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
 		A76B490529B116C000712046 = {
 			isa = PBXGroup;
 			children = (
@@ -206,9 +241,11 @@
 				A71A6BA329B125F100A08976 /* NetworkRequests */,
 				A71A6BA029B125A800A08976 /* ViewModels */,
 				A71A6B9629B11A9100A08976 /* ViewControllers */,
+				A71A6BAD29B12DC500A08976 /* Cells */,
 				A71A6B9D29B1220600A08976 /* Models */,
 				A71A6B8929B1195400A08976 /* Networking */,
 				A71A6B8229B1188F00A08976 /* Extensions */,
+				A71A6BB029B13B9700A08976 /* Reusable */,
 				A71A6BAB29B12B3F00A08976 /* FuzeNavigationController.swift */,
 				A71A6B9B29B11C2D00A08976 /* ViewCode.swift */,
 				A76B491129B116C000712046 /* AppDelegate.swift */,
@@ -381,14 +418,21 @@
 				A71A6BA529B1260400A08976 /* MatchListNetworkRequest.swift in Sources */,
 				A71A6B9229B1196D00A08976 /* Result.swift in Sources */,
 				A71A6B9A29B11BDE00A08976 /* UIColorExtensions.swift in Sources */,
+				A71A6BBA29B13B9700A08976 /* UITableView+Reusable.swift in Sources */,
 				A71A6B9C29B11C2D00A08976 /* ViewCode.swift in Sources */,
 				A71A6B8629B118AA00A08976 /* StringExtensions.swift in Sources */,
+				A71A6BB829B13B9700A08976 /* ObjectAssociation.swift in Sources */,
+				A71A6BAF29B12FDF00A08976 /* MatchTableViewCell.swift in Sources */,
 				A71A6BAC29B12B3F00A08976 /* FuzeNavigationController.swift in Sources */,
+				A71A6BBB29B13B9700A08976 /* NibLoadable.swift in Sources */,
 				A71A6B9329B1196D00A08976 /* URLMethod.swift in Sources */,
 				A71A6B8829B118AA00A08976 /* URLRequestExtensions.swift in Sources */,
+				A71A6BB929B13B9700A08976 /* Reusable.swift in Sources */,
 				A76B491229B116C000712046 /* AppDelegate.swift in Sources */,
 				A71A6BA229B125BD00A08976 /* MatchListViewModel.swift in Sources */,
+				A71A6BB729B13B9700A08976 /* UICollectionView+Reusable.swift in Sources */,
 				A71A6B9F29B1221E00A08976 /* Match.swift in Sources */,
+				A71A6BBC29B13B9700A08976 /* NibOwnerLoadable.swift in Sources */,
 				A71A6B9129B1196D00A08976 /* NetworkProtocol.swift in Sources */,
 				A71A6B8729B118AA00A08976 /* UIImageViewExtensions.swift in Sources */,
 				A71A6B9529B1196D00A08976 /* NetworkError.swift in Sources */,
