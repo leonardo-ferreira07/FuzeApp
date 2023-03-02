@@ -87,6 +87,12 @@ extension MatchViewController: ViewCode {
         title = (viewModel.match?.league?.name ?? "") + " " + (viewModel.match?.serie?.fullName ?? "")
         view.backgroundColor = mainColor
         navigationItem.largeTitleDisplayMode = .never
+        let backButton = UIBarButtonItem(image: UIImage(named: "icArrow"),
+                                      style: .plain,
+                                      target: navigationController,
+                                      action: #selector(UINavigationController.popViewController(animated:)))
+        backButton.tintColor = .white
+        navigationItem.leftBarButtonItem = backButton
         
         let appearance = UINavigationBarAppearance(idiom: .phone)
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
