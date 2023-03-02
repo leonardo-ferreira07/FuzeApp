@@ -31,11 +31,13 @@ struct Opponent: Decodable {
     let acronym: String?
     let name: String?
     let imageUrl: String?
+    let id: Int?
     
     private enum CodingKeys: String, CodingKey {
         case acronym
         case name
         case imageUrl = "image_url"
+        case id
     }
 }
 
