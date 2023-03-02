@@ -122,6 +122,7 @@ extension MatchesListViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as MatchTableViewCell
+        cell.setupCell(viewModel.matches[indexPath.row])
         
         return cell
     }

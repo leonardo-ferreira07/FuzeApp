@@ -61,6 +61,7 @@ class MatchTableViewCell: UITableViewCell, Reusable {
         let stack = UIStackView(arrangedSubviews: [opponent1Image, opponent1Label])
         stack.axis = .vertical
         stack.spacing = 10
+        stack.alignment = .center
         
         return stack
     }()
@@ -69,6 +70,7 @@ class MatchTableViewCell: UITableViewCell, Reusable {
         let stack = UIStackView(arrangedSubviews: [opponent2Image, opponent2Label])
         stack.axis = .vertical
         stack.spacing = 10
+        stack.alignment = .center
         
         return stack
     }()
@@ -77,6 +79,8 @@ class MatchTableViewCell: UITableViewCell, Reusable {
         let stack = UIStackView(arrangedSubviews: [opponent1StackView, versusLabel, opponent2StackView])
         stack.axis = .horizontal
         stack.spacing = 20
+        stack.alignment = .center
+        stack.distribution = .equalCentering
         
         return stack
     }()
@@ -152,6 +156,26 @@ class MatchTableViewCell: UITableViewCell, Reusable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    // MARK: - Methods
+    
+    func setupCell(_ match: Match) {
+        let opponent1 = match.opponents?.first?.opponent
+        let opponent2 = match.opponents?.last?.opponent
+        
+        if let image = opponent1?.imageUrl {
+            opponent1Image.loadImage(image)
+        }
+        if let image = opponent2?.imageUrl {
+            opponent2Image.loadImage(image)
+        }
+        if let image = match.league?.imageUrl {
+            leagueImageView.loadImage(image)
+        }
+        opponent1Label.text = opponent1?.name
+        opponent2Label.text = opponent2?.name
+        leagueLabel.text = (match.league?.name ?? "") + " " + (match.serie?.fullName ?? "")
     }
 
 }
