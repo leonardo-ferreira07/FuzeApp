@@ -76,14 +76,6 @@ class MatchesListViewController: UIViewController {
         }
     }
     
-    private func displayAlert(_ error: NetworkError) {
-        let alertController = UIAlertController(title: "We are sorry!", message: error.textError(), preferredStyle: .alert)
-        let okButtton = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alertController.addAction(okButtton)
-        
-        self.present(alertController, animated: true, completion: nil)
-    }
-    
     @objc private func requestMathesData() {
         setupLoading(true)
         viewModel.fetchMatches { [weak self] result in

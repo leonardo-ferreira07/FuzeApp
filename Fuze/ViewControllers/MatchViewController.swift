@@ -142,6 +142,13 @@ class MatchViewController: UIViewController {
             DispatchQueue.main.async {
                 self?.setupLoading(false)
                 self?.configureHeaderUI()
+                
+                switch result {
+                case .success:
+                    self?.tableView.reloadData()
+                case .failure(let networkError):
+                    self?.displayAlert(networkError)
+                }
             }
         }
     }
@@ -200,7 +207,7 @@ extension MatchViewController: ViewCode {
         headerStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: opponentsStackView.bottomAnchor, constant: 20).isActive = true
+        tableView.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 20).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
