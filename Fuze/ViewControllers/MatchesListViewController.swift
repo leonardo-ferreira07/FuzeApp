@@ -18,6 +18,7 @@ class MatchesListViewController: UIViewController {
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.register(cellType: MatchTableViewCell.self)
+        tableView.refreshControl = refreshControl
         
         return tableView
     }()
@@ -26,6 +27,14 @@ class MatchesListViewController: UIViewController {
         let activityIndicator = UIActivityIndicatorView(style: .large)
         
         return activityIndicator
+    }()
+    
+    private lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .white
+        refreshControl.addTarget(self, action: #selector(requestMathesData), for: .valueChanged)
+        
+        return refreshControl
     }()
     
     // MARK: - Properties
@@ -54,19 +63,7 @@ class MatchesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLoading(true)
-        viewModel.fetchMatches { [weak self] result in
-            DispatchQueue.main.async {
-                self?.setupLoading(false)
-                
-                switch result {
-                case .success:
-                    self?.tableView.reloadData()
-                case .failure(let networkError):
-                    self?.displayAlert(networkError)
-                }
-            }
-        }
+        requestMathesData()
     }
     
     // MARK: - Methods
@@ -85,6 +82,23 @@ class MatchesListViewController: UIViewController {
         alertController.addAction(okButtton)
         
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    @objc private func requestMathesData() {
+        setupLoading(true)
+        viewModel.fetchMatches { [weak self] result in
+            DispatchQueue.main.async {
+                self?.setupLoading(false)
+                self?.refreshControl.endRefreshing()
+                
+                switch result {
+                case .success:
+                    self?.tableView.reloadData()
+                case .failure(let networkError):
+                    self?.displayAlert(networkError)
+                }
+            }
+        }
     }
 
 }
