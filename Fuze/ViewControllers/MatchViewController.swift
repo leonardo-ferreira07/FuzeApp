@@ -14,8 +14,8 @@ class MatchViewController: UIViewController {
     internal lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .clear
-//        tableView.dataSource = self
-//        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorStyle = .none
         
         return tableView
@@ -53,8 +53,21 @@ class MatchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel.fetchTeams { result in
-            
+        setupLoading(true)
+        viewModel.fetchTeams { [weak self] result in
+            DispatchQueue.main.async {
+                self?.setupLoading(false)
+            }
+        }
+    }
+    
+    // MARK: - Methods
+    
+    private func setupLoading(_ show: Bool) {
+        if show {
+            activityIndicator.startAnimating()
+        } else {
+            activityIndicator.stopAnimating()
         }
     }
 
