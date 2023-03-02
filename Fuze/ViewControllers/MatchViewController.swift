@@ -17,6 +17,7 @@ class MatchViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+        tableView.register(cellType: PlayerTableViewCell.self)
         
         return tableView
     }()
@@ -245,10 +246,12 @@ extension MatchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueReusableCell(for: indexPath) as PlayerTableViewCell
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        30
+        74
     }
 }
