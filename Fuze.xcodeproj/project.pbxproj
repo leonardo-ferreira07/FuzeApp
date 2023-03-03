@@ -50,6 +50,9 @@
 		A76B493529B116C100712046 /* FuzeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B493429B116C100712046 /* FuzeUITestsLaunchTests.swift */; };
 		A7D9A10F29B24CE3002CCFF1 /* URLConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A10E29B24CE3002CCFF1 /* URLConstantsTests.swift */; };
 		A7D9A11129B24D4A002CCFF1 /* ConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A11029B24D4A002CCFF1 /* ConstantsTests.swift */; };
+		A7D9A11429B24DB8002CCFF1 /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A11329B24DB8002CCFF1 /* NetworkErrorTests.swift */; };
+		A7D9A11629B24DE3002CCFF1 /* MatchListNetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A11529B24DE3002CCFF1 /* MatchListNetworkRequestTests.swift */; };
+		A7D9A11829B24E8C002CCFF1 /* TeamNetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A11729B24E8C002CCFF1 /* TeamNetworkRequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +118,9 @@
 		A76B493429B116C100712046 /* FuzeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A7D9A10E29B24CE3002CCFF1 /* URLConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstantsTests.swift; sourceTree = "<group>"; };
 		A7D9A11029B24D4A002CCFF1 /* ConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTests.swift; sourceTree = "<group>"; };
+		A7D9A11329B24DB8002CCFF1 /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
+		A7D9A11529B24DE3002CCFF1 /* MatchListNetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequestTests.swift; sourceTree = "<group>"; };
+		A7D9A11729B24E8C002CCFF1 /* TeamNetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNetworkRequestTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +290,7 @@
 		A76B492729B116C100712046 /* FuzeTests */ = {
 			isa = PBXGroup;
 			children = (
+				A7D9A11229B24DA9002CCFF1 /* Network Requests */,
 				A7D9A10D29B24CB6002CCFF1 /* Constants */,
 			);
 			path = FuzeTests;
@@ -305,6 +312,16 @@
 				A7D9A11029B24D4A002CCFF1 /* ConstantsTests.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		A7D9A11229B24DA9002CCFF1 /* Network Requests */ = {
+			isa = PBXGroup;
+			children = (
+				A7D9A11329B24DB8002CCFF1 /* NetworkErrorTests.swift */,
+				A7D9A11529B24DE3002CCFF1 /* MatchListNetworkRequestTests.swift */,
+				A7D9A11729B24E8C002CCFF1 /* TeamNetworkRequestTests.swift */,
+			);
+			path = "Network Requests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -487,8 +504,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D9A11629B24DE3002CCFF1 /* MatchListNetworkRequestTests.swift in Sources */,
 				A7D9A10F29B24CE3002CCFF1 /* URLConstantsTests.swift in Sources */,
 				A7D9A11129B24D4A002CCFF1 /* ConstantsTests.swift in Sources */,
+				A7D9A11429B24DB8002CCFF1 /* NetworkErrorTests.swift in Sources */,
+				A7D9A11829B24E8C002CCFF1 /* TeamNetworkRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
