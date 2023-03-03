@@ -47,6 +47,7 @@ class PlayerTableViewCell: UITableViewCell, Reusable {
         let stackView = UIStackView(arrangedSubviews: [nickNameLabel1, nameLabel1])
         stackView.axis = .vertical
         stackView.spacing = 8
+        stackView.alignment = .trailing
         
         return stackView
     }()
@@ -87,6 +88,7 @@ class PlayerTableViewCell: UITableViewCell, Reusable {
         let stackView = UIStackView(arrangedSubviews: [nickNameLabel2, nameLabel2])
         stackView.axis = .vertical
         stackView.spacing = 8
+        stackView.alignment = .leading
         
         return stackView
     }()
@@ -112,7 +114,19 @@ class PlayerTableViewCell: UITableViewCell, Reusable {
     // MARK: - Methods
     
     func setupCell(_ player: Player?, player2: Player?) {
+        cardView1.isHidden = player == nil
+        cardView2.isHidden = player2 == nil
         
+        nickNameLabel1.text = player?.name
+        nickNameLabel2.text = player2?.name
+        nameLabel1.text = "\(player?.firstName ?? "") \(player?.lastName ?? "")"
+        nameLabel2.text = "\(player2?.firstName ?? "") \(player2?.lastName ?? "")"
+        if let image = player?.imageUrl {
+            playerImageView1.loadImage(image)
+        }
+        if let image = player2?.imageUrl {
+            playerImageView2.loadImage(image)
+        }
     }
 
 }
@@ -136,6 +150,8 @@ extension PlayerTableViewCell: ViewCode {
         let cardWidth = (UIScreen.main.bounds.width-13)/2
         
         [playerImageView1, playerImageView2].forEach { image in
+            image.layer.cornerRadius = 8
+            image.clipsToBounds = true
             image.translatesAutoresizingMaskIntoConstraints = false
             image.heightAnchor.constraint(equalToConstant: 48.5).isActive = true
             image.widthAnchor.constraint(equalToConstant: 48.5).isActive = true
@@ -144,31 +160,31 @@ extension PlayerTableViewCell: ViewCode {
         textStackView1.translatesAutoresizingMaskIntoConstraints = false
         textStackView1.topAnchor.constraint(equalTo: cardView1.topAnchor, constant: 15).isActive = true
         textStackView1.leadingAnchor.constraint(equalTo: cardView1.leadingAnchor, constant: 8).isActive = true
+        textStackView1.trailingAnchor.constraint(equalTo: playerImageView1.leadingAnchor, constant: -8).isActive = true
         textStackView1.bottomAnchor.constraint(equalTo: cardView1.bottomAnchor, constant: -8).isActive = true
         
-        playerImageView1.bottomAnchor.constraint(equalTo: cardView1.bottomAnchor, constant: -8).isActive = true
-        playerImageView1.leadingAnchor.constraint(equalTo: textStackView1.trailingAnchor, constant: 16).isActive = true
+        playerImageView1.bottomAnchor.constraint(equalTo: cardView1.bottomAnchor, constant: -12).isActive = true
         playerImageView1.trailingAnchor.constraint(equalTo: cardView1.trailingAnchor, constant: -12).isActive = true
         
         cardView1.translatesAutoresizingMaskIntoConstraints = false
-        cardView1.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
+        cardView1.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2.5).isActive = true
         cardView1.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
-        cardView1.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16).isActive = true
+        cardView1.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -13.5).isActive = true
         cardView1.widthAnchor.constraint(equalToConstant: cardWidth).isActive = true
         
         textStackView2.translatesAutoresizingMaskIntoConstraints = false
         textStackView2.topAnchor.constraint(equalTo: cardView2.topAnchor, constant: 15).isActive = true
         textStackView2.trailingAnchor.constraint(equalTo: cardView2.trailingAnchor, constant: -8).isActive = true
+        textStackView2.leadingAnchor.constraint(equalTo: playerImageView2.trailingAnchor, constant: 8).isActive = true
         textStackView2.bottomAnchor.constraint(equalTo: cardView2.bottomAnchor, constant: -8).isActive = true
         
-        playerImageView2.bottomAnchor.constraint(equalTo: cardView2.bottomAnchor, constant: -8).isActive = true
-        playerImageView2.leadingAnchor.constraint(equalTo: textStackView2.trailingAnchor, constant: 16).isActive = true
-        playerImageView2.trailingAnchor.constraint(equalTo: cardView2.trailingAnchor, constant: -12).isActive = true
+        playerImageView2.bottomAnchor.constraint(equalTo: cardView2.bottomAnchor, constant: -12).isActive = true
+        playerImageView2.leadingAnchor.constraint(equalTo: cardView2.leadingAnchor, constant: 12).isActive = true
         
         cardView2.translatesAutoresizingMaskIntoConstraints = false
-        cardView2.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
+        cardView2.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2.5).isActive = true
         cardView2.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
-        cardView2.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16).isActive = true
+        cardView2.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -13.5).isActive = true
         cardView2.widthAnchor.constraint(equalToConstant: cardWidth).isActive = true
     }
     

@@ -208,7 +208,7 @@ extension MatchViewController: ViewCode {
         headerStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 20).isActive = true
+        tableView.topAnchor.constraint(equalTo: headerStackView.bottomAnchor, constant: 22).isActive = true
         tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
         tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
@@ -247,6 +247,11 @@ extension MatchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath) as PlayerTableViewCell
+        let players1 = viewModel.team1?.players
+        let players2 = viewModel.team2?.players
+        
+        
+        cell.setupCell(players1?.count ?? 0 > indexPath.row ? players1?[indexPath.row] : nil, player2: players2?.count ?? 0 > indexPath.row ? players2?[indexPath.row] : nil)
         
         return cell
     }

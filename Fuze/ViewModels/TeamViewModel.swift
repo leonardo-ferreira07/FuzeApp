@@ -35,7 +35,7 @@ class TeamViewModel {
         service.performRequest(team1Request) { [weak self] (result: Result<[Team]>) in
             switch result {
             case .success(let team):
-                self?.team2 = team.first
+                self?.team1 = team.first
             case .failure(let error):
                 print(error)
             }
@@ -47,7 +47,7 @@ class TeamViewModel {
         service.performRequest(team2Request) { [weak self] (result: Result<[Team]>) in
             switch result {
             case .success(let team):
-                self?.team1 = team.first
+                self?.team2 = team.first
             case .failure(let error):
                 print(error)
             }
