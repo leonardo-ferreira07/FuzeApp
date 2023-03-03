@@ -29,7 +29,7 @@ class MatchesListViewController: UIViewController {
         return activityIndicator
     }()
     
-    private lazy var refreshControl: UIRefreshControl = {
+    internal lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(requestMathesData), for: .valueChanged)

@@ -102,7 +102,7 @@ class MatchViewController: UIViewController {
         return label
     }()
     
-    private lazy var headerStackView: UIStackView = {
+    internal lazy var headerStackView: UIStackView = {
         let stackView = UIStackView(arrangedSubviews: [opponentsStackView, timeLabel])
         stackView.axis = .vertical
         stackView.spacing = 20
