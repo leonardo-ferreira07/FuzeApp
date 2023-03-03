@@ -53,6 +53,8 @@
 		A7D9A11429B24DB8002CCFF1 /* NetworkErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A11329B24DB8002CCFF1 /* NetworkErrorTests.swift */; };
 		A7D9A11629B24DE3002CCFF1 /* MatchListNetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A11529B24DE3002CCFF1 /* MatchListNetworkRequestTests.swift */; };
 		A7D9A11829B24E8C002CCFF1 /* TeamNetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A11729B24E8C002CCFF1 /* TeamNetworkRequestTests.swift */; };
+		A7D9A11B29B24F5A002CCFF1 /* MatchListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A11A29B24F5A002CCFF1 /* MatchListViewModelTests.swift */; };
+		A7D9A11D29B25133002CCFF1 /* MatchDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A11C29B25133002CCFF1 /* MatchDetailViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		A7D9A11329B24DB8002CCFF1 /* NetworkErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorTests.swift; sourceTree = "<group>"; };
 		A7D9A11529B24DE3002CCFF1 /* MatchListNetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListNetworkRequestTests.swift; sourceTree = "<group>"; };
 		A7D9A11729B24E8C002CCFF1 /* TeamNetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNetworkRequestTests.swift; sourceTree = "<group>"; };
+		A7D9A11A29B24F5A002CCFF1 /* MatchListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchListViewModelTests.swift; sourceTree = "<group>"; };
+		A7D9A11C29B25133002CCFF1 /* MatchDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,8 +294,9 @@
 		A76B492729B116C100712046 /* FuzeTests */ = {
 			isa = PBXGroup;
 			children = (
-				A7D9A11229B24DA9002CCFF1 /* Network Requests */,
+				A7D9A11929B24F4C002CCFF1 /* ViewModels */,
 				A7D9A10D29B24CB6002CCFF1 /* Constants */,
+				A7D9A11229B24DA9002CCFF1 /* Network Requests */,
 			);
 			path = FuzeTests;
 			sourceTree = "<group>";
@@ -322,6 +327,15 @@
 				A7D9A11729B24E8C002CCFF1 /* TeamNetworkRequestTests.swift */,
 			);
 			path = "Network Requests";
+			sourceTree = "<group>";
+		};
+		A7D9A11929B24F4C002CCFF1 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A7D9A11A29B24F5A002CCFF1 /* MatchListViewModelTests.swift */,
+				A7D9A11C29B25133002CCFF1 /* MatchDetailViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,7 +521,9 @@
 				A7D9A11629B24DE3002CCFF1 /* MatchListNetworkRequestTests.swift in Sources */,
 				A7D9A10F29B24CE3002CCFF1 /* URLConstantsTests.swift in Sources */,
 				A7D9A11129B24D4A002CCFF1 /* ConstantsTests.swift in Sources */,
+				A7D9A11D29B25133002CCFF1 /* MatchDetailViewModelTests.swift in Sources */,
 				A7D9A11429B24DB8002CCFF1 /* NetworkErrorTests.swift in Sources */,
+				A7D9A11B29B24F5A002CCFF1 /* MatchListViewModelTests.swift in Sources */,
 				A7D9A11829B24E8C002CCFF1 /* TeamNetworkRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
