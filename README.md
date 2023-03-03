@@ -7,6 +7,7 @@ This app was built using UIKit and Swift, and for dependency manager SPM (Swift 
 ## Dependencies
 
 - [Nuke](https://github.com/kean/Nuke) - Nuke provides an efficient way to download and display images in your app. It's easy to learn and use. Its architecture enables many powerful features while offering virtually unlimited possibilities for customization.
+- [Reusable](https://github.com/AliSoftware/Reusable) - Was added as a internal dependency in the code. It's inside the `Reusable` folder in the project.
 
 ### Implementation
 
