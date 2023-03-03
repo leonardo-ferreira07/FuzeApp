@@ -37,7 +37,7 @@
 		A71A6BBE29B150E700A08976 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BBD29B150E700A08976 /* DateExtensions.swift */; };
 		A71A6BC029B151E500A08976 /* TeamNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BBF29B151E500A08976 /* TeamNetworkRequest.swift */; };
 		A71A6BC229B152AD00A08976 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BC129B152AD00A08976 /* Team.swift */; };
-		A71A6BC429B1534D00A08976 /* TeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BC329B1534D00A08976 /* TeamViewModel.swift */; };
+		A71A6BC429B1534D00A08976 /* MatchDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BC329B1534D00A08976 /* MatchDetailViewModel.swift */; };
 		A71A6BC629B155AD00A08976 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BC529B155AD00A08976 /* MatchViewController.swift */; };
 		A71A6BC829B165FD00A08976 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BC729B165FD00A08976 /* ViewControllerExtensions.swift */; };
 		A71A6BCA29B1668600A08976 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71A6BC929B1668600A08976 /* PlayerTableViewCell.swift */; };
@@ -97,7 +97,7 @@
 		A71A6BBD29B150E700A08976 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		A71A6BBF29B151E500A08976 /* TeamNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamNetworkRequest.swift; sourceTree = "<group>"; };
 		A71A6BC129B152AD00A08976 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		A71A6BC329B1534D00A08976 /* TeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewModel.swift; sourceTree = "<group>"; };
+		A71A6BC329B1534D00A08976 /* MatchDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailViewModel.swift; sourceTree = "<group>"; };
 		A71A6BC529B155AD00A08976 /* MatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
 		A71A6BC729B165FD00A08976 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
 		A71A6BC929B1668600A08976 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				A71A6BA129B125BD00A08976 /* MatchListViewModel.swift */,
-				A71A6BC329B1534D00A08976 /* TeamViewModel.swift */,
+				A71A6BC329B1534D00A08976 /* MatchDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -437,7 +437,7 @@
 				A71A6BC629B155AD00A08976 /* MatchViewController.swift in Sources */,
 				A71A6B9429B1196D00A08976 /* NetworkRequester.swift in Sources */,
 				A71A6BAA29B1289300A08976 /* Constants.swift in Sources */,
-				A71A6BC429B1534D00A08976 /* TeamViewModel.swift in Sources */,
+				A71A6BC429B1534D00A08976 /* MatchDetailViewModel.swift in Sources */,
 				A71A6BA529B1260400A08976 /* MatchListNetworkRequest.swift in Sources */,
 				A71A6B9229B1196D00A08976 /* Result.swift in Sources */,
 				A71A6B9A29B11BDE00A08976 /* UIColorExtensions.swift in Sources */,

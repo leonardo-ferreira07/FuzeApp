@@ -114,7 +114,7 @@ class MatchViewController: UIViewController {
     
     // MARK: - Properties
     
-    let viewModel: TeamViewModel
+    let viewModel: MatchDetailViewModel
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
@@ -122,7 +122,7 @@ class MatchViewController: UIViewController {
     
     // MARK: - Initializers
     
-    init(viewModel: TeamViewModel) {
+    init(viewModel: MatchDetailViewModel) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil)

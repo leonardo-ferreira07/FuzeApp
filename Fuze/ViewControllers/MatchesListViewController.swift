@@ -148,7 +148,7 @@ extension MatchesListViewController: UITableViewDataSource, UITableViewDelegate 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let teamViewModel = TeamViewModel(service: NetworkRequester(), match: viewModel.matches[indexPath.row])
+        let teamViewModel = MatchDetailViewModel(service: NetworkRequester(), match: viewModel.matches[indexPath.row])
         let viewController = MatchViewController(viewModel: teamViewModel)
         navigationController?.pushViewController(viewController, animated: true)
     }
