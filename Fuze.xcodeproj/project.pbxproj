@@ -46,9 +46,10 @@
 		A76B491929B116C000712046 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76B491729B116C000712046 /* Main.storyboard */; };
 		A76B491B29B116C100712046 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A76B491A29B116C100712046 /* Assets.xcassets */; };
 		A76B491E29B116C100712046 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A76B491C29B116C100712046 /* LaunchScreen.storyboard */; };
-		A76B492929B116C100712046 /* FuzeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B492829B116C100712046 /* FuzeTests.swift */; };
 		A76B493329B116C100712046 /* FuzeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B493229B116C100712046 /* FuzeUITests.swift */; };
 		A76B493529B116C100712046 /* FuzeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76B493429B116C100712046 /* FuzeUITestsLaunchTests.swift */; };
+		A7D9A10F29B24CE3002CCFF1 /* URLConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A10E29B24CE3002CCFF1 /* URLConstantsTests.swift */; };
+		A7D9A11129B24D4A002CCFF1 /* ConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D9A11029B24D4A002CCFF1 /* ConstantsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,10 +110,11 @@
 		A76B491D29B116C100712046 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A76B491F29B116C100712046 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A76B492429B116C100712046 /* FuzeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A76B492829B116C100712046 /* FuzeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzeTests.swift; sourceTree = "<group>"; };
 		A76B492E29B116C100712046 /* FuzeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuzeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A76B493229B116C100712046 /* FuzeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzeUITests.swift; sourceTree = "<group>"; };
 		A76B493429B116C100712046 /* FuzeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuzeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A7D9A10E29B24CE3002CCFF1 /* URLConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstantsTests.swift; sourceTree = "<group>"; };
+		A7D9A11029B24D4A002CCFF1 /* ConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,7 +284,7 @@
 		A76B492729B116C100712046 /* FuzeTests */ = {
 			isa = PBXGroup;
 			children = (
-				A76B492829B116C100712046 /* FuzeTests.swift */,
+				A7D9A10D29B24CB6002CCFF1 /* Constants */,
 			);
 			path = FuzeTests;
 			sourceTree = "<group>";
@@ -294,6 +296,15 @@
 				A76B493429B116C100712046 /* FuzeUITestsLaunchTests.swift */,
 			);
 			path = FuzeUITests;
+			sourceTree = "<group>";
+		};
+		A7D9A10D29B24CB6002CCFF1 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A7D9A10E29B24CE3002CCFF1 /* URLConstantsTests.swift */,
+				A7D9A11029B24D4A002CCFF1 /* ConstantsTests.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +382,7 @@
 					};
 					A76B492329B116C100712046 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = A76B490D29B116C000712046;
 					};
 					A76B492D29B116C100712046 = {
@@ -475,7 +487,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A76B492929B116C100712046 /* FuzeTests.swift in Sources */,
+				A7D9A10F29B24CE3002CCFF1 /* URLConstantsTests.swift in Sources */,
+				A7D9A11129B24D4A002CCFF1 /* ConstantsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,15 +711,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z9AJS45MZ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonardo.FuzeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fuze.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fuze";
@@ -718,11 +738,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Z9AJS45MZ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.leonardo.FuzeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
