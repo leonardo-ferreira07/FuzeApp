@@ -39,6 +39,8 @@ class PlayerTableViewCell: UITableViewCell, Reusable {
     private lazy var playerImageView1: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 8
+        imageView.contentMode = .scaleAspectFill
+        imageView.backgroundColor = UIColor(hexString: "#C4C4C4")
         
         return imageView
     }()
@@ -80,6 +82,8 @@ class PlayerTableViewCell: UITableViewCell, Reusable {
     private lazy var playerImageView2: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 8
+        imageView.contentMode = .scaleAspectFill
+        imageView.backgroundColor = UIColor(hexString: "#C4C4C4")
         
         return imageView
     }()
