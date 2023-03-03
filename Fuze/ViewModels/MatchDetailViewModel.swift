@@ -13,6 +13,7 @@ class MatchDetailViewModel {
     private let team1Request: RequestProtocol
     private let team2Request: RequestProtocol
     private let service: NetworkProtocol
+    private var error: NetworkError? = nil
     
     private(set) var team1: Team?
     private(set) var team2: Team?
@@ -38,6 +39,7 @@ class MatchDetailViewModel {
                 self?.team1 = team.first
             case .failure(let error):
                 print(error)
+                self?.error = error
             }
             
             dispatchGroup.leave()
@@ -50,6 +52,7 @@ class MatchDetailViewModel {
                 self?.team2 = team.first
             case .failure(let error):
                 print(error)
+                self?.error = error
             }
             
             dispatchGroup.leave()
@@ -59,7 +62,12 @@ class MatchDetailViewModel {
         dispatchGroup.notify(queue: .global(qos: .background)) { [weak self] in
             guard let self else { return }
             self.numberOfItems = max(self.team1?.players?.count ?? 0, self.team2?.players?.count ?? 0)
-            completion(Result.success(true))
+            
+            if let error = self.error {
+                completion(Result.failure(error))
+            } else {
+                completion(Result.success(true))
+            }
         }
         
     }
