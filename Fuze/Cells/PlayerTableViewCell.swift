@@ -96,6 +96,8 @@ class PlayerTableViewCell: UITableViewCell, Reusable {
         
         return stackView
     }()
+    
+    private let cardWidth = (UIScreen.main.bounds.width-13)/2
 
     // MARK: - Initializers
     
@@ -132,6 +134,40 @@ class PlayerTableViewCell: UITableViewCell, Reusable {
             playerImageView2.loadImage(image)
         }
     }
+    
+    private func configureConstraintsForCardView1() {
+        textStackView1.translatesAutoresizingMaskIntoConstraints = false
+        textStackView1.topAnchor.constraint(equalTo: cardView1.topAnchor, constant: 15).isActive = true
+        textStackView1.leadingAnchor.constraint(equalTo: cardView1.leadingAnchor, constant: 8).isActive = true
+        textStackView1.trailingAnchor.constraint(equalTo: playerImageView1.leadingAnchor, constant: -8).isActive = true
+        textStackView1.bottomAnchor.constraint(equalTo: cardView1.bottomAnchor, constant: -8).isActive = true
+        
+        playerImageView1.bottomAnchor.constraint(equalTo: cardView1.bottomAnchor, constant: -12).isActive = true
+        playerImageView1.trailingAnchor.constraint(equalTo: cardView1.trailingAnchor, constant: -12).isActive = true
+        
+        cardView1.translatesAutoresizingMaskIntoConstraints = false
+        cardView1.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2.5).isActive = true
+        cardView1.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
+        cardView1.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -13.5).isActive = true
+        cardView1.widthAnchor.constraint(equalToConstant: cardWidth).isActive = true
+    }
+    
+    private func configureConstraintsForCardView2() {
+        textStackView2.translatesAutoresizingMaskIntoConstraints = false
+        textStackView2.topAnchor.constraint(equalTo: cardView2.topAnchor, constant: 15).isActive = true
+        textStackView2.trailingAnchor.constraint(equalTo: cardView2.trailingAnchor, constant: -8).isActive = true
+        textStackView2.leadingAnchor.constraint(equalTo: playerImageView2.trailingAnchor, constant: 8).isActive = true
+        textStackView2.bottomAnchor.constraint(equalTo: cardView2.bottomAnchor, constant: -8).isActive = true
+        
+        playerImageView2.bottomAnchor.constraint(equalTo: cardView2.bottomAnchor, constant: -12).isActive = true
+        playerImageView2.leadingAnchor.constraint(equalTo: cardView2.leadingAnchor, constant: 12).isActive = true
+        
+        cardView2.translatesAutoresizingMaskIntoConstraints = false
+        cardView2.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2.5).isActive = true
+        cardView2.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
+        cardView2.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -13.5).isActive = true
+        cardView2.widthAnchor.constraint(equalToConstant: cardWidth).isActive = true
+    }
 
 }
 
@@ -151,8 +187,6 @@ extension PlayerTableViewCell: ViewCode {
     }
     
     func setupConstraints() {
-        let cardWidth = (UIScreen.main.bounds.width-13)/2
-        
         [playerImageView1, playerImageView2].forEach { image in
             image.layer.cornerRadius = 8
             image.clipsToBounds = true
@@ -161,35 +195,8 @@ extension PlayerTableViewCell: ViewCode {
             image.widthAnchor.constraint(equalToConstant: 48.5).isActive = true
         }
         
-        textStackView1.translatesAutoresizingMaskIntoConstraints = false
-        textStackView1.topAnchor.constraint(equalTo: cardView1.topAnchor, constant: 15).isActive = true
-        textStackView1.leadingAnchor.constraint(equalTo: cardView1.leadingAnchor, constant: 8).isActive = true
-        textStackView1.trailingAnchor.constraint(equalTo: playerImageView1.leadingAnchor, constant: -8).isActive = true
-        textStackView1.bottomAnchor.constraint(equalTo: cardView1.bottomAnchor, constant: -8).isActive = true
-        
-        playerImageView1.bottomAnchor.constraint(equalTo: cardView1.bottomAnchor, constant: -12).isActive = true
-        playerImageView1.trailingAnchor.constraint(equalTo: cardView1.trailingAnchor, constant: -12).isActive = true
-        
-        cardView1.translatesAutoresizingMaskIntoConstraints = false
-        cardView1.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2.5).isActive = true
-        cardView1.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 0).isActive = true
-        cardView1.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -13.5).isActive = true
-        cardView1.widthAnchor.constraint(equalToConstant: cardWidth).isActive = true
-        
-        textStackView2.translatesAutoresizingMaskIntoConstraints = false
-        textStackView2.topAnchor.constraint(equalTo: cardView2.topAnchor, constant: 15).isActive = true
-        textStackView2.trailingAnchor.constraint(equalTo: cardView2.trailingAnchor, constant: -8).isActive = true
-        textStackView2.leadingAnchor.constraint(equalTo: playerImageView2.trailingAnchor, constant: 8).isActive = true
-        textStackView2.bottomAnchor.constraint(equalTo: cardView2.bottomAnchor, constant: -8).isActive = true
-        
-        playerImageView2.bottomAnchor.constraint(equalTo: cardView2.bottomAnchor, constant: -12).isActive = true
-        playerImageView2.leadingAnchor.constraint(equalTo: cardView2.leadingAnchor, constant: 12).isActive = true
-        
-        cardView2.translatesAutoresizingMaskIntoConstraints = false
-        cardView2.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2.5).isActive = true
-        cardView2.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 0).isActive = true
-        cardView2.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -13.5).isActive = true
-        cardView2.widthAnchor.constraint(equalToConstant: cardWidth).isActive = true
+        configureConstraintsForCardView1()
+        configureConstraintsForCardView2()
     }
     
     func setupAdditionalConfiguration() {
