@@ -178,6 +178,47 @@ class MatchTableViewCell: UITableViewCell, Reusable {
         leagueLabel.text = (match.league?.name ?? "") + " " + (match.serie?.fullName ?? "")
         timeLabel.text = Date.convertToFuzeDate(match.beginAt ?? "")
     }
+    
+    private func configureLeagueImageViewConstraints() {
+        leagueImageView.translatesAutoresizingMaskIntoConstraints = false
+        leagueImageView.heightAnchor.constraint(equalToConstant: 16).isActive = true
+        leagueImageView.widthAnchor.constraint(equalToConstant: 16).isActive = true
+    }
+    
+    private func configureOpponentsImageViewConstraints() {
+        [opponent1Image, opponent2Image].forEach { image in
+            image.translatesAutoresizingMaskIntoConstraints = false
+            image.heightAnchor.constraint(equalToConstant: 60).isActive = true
+            image.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        }
+    }
+    
+    private func configureOpponentsStackViewConstraints() {
+        opponentsStackView.translatesAutoresizingMaskIntoConstraints = false
+        opponentsStackView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 43.5).isActive = true
+        opponentsStackView.centerXAnchor.constraint(equalTo: cardView.centerXAnchor, constant: 0).isActive = true
+    }
+    
+    private func configureLeagueStackViewConstraints() {
+        leagueStackView.translatesAutoresizingMaskIntoConstraints = false
+        leagueStackView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 15).isActive = true
+        leagueStackView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -8).isActive = true
+    }
+    
+    private func configureSeparatorViewConstraints() {
+        separatorView.translatesAutoresizingMaskIntoConstraints = false
+        separatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        separatorView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 0).isActive = true
+        separatorView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: 0).isActive = true
+        separatorView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -32).isActive = true
+    }
+    
+    private func configureTimeViewConstraints() {
+        timeView.translatesAutoresizingMaskIntoConstraints = false
+        timeView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 0).isActive = true
+        timeView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: 0).isActive = true
+        timeView.heightAnchor.constraint(equalToConstant: 25).isActive = true
+    }
 
 }
 
@@ -195,34 +236,12 @@ extension MatchTableViewCell: ViewCode {
     }
     
     func setupConstraints() {
-        leagueImageView.translatesAutoresizingMaskIntoConstraints = false
-        leagueImageView.heightAnchor.constraint(equalToConstant: 16).isActive = true
-        leagueImageView.widthAnchor.constraint(equalToConstant: 16).isActive = true
-        
-        [opponent1Image, opponent2Image].forEach { image in
-            image.translatesAutoresizingMaskIntoConstraints = false
-            image.heightAnchor.constraint(equalToConstant: 60).isActive = true
-            image.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        }
-        
-        opponentsStackView.translatesAutoresizingMaskIntoConstraints = false
-        opponentsStackView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 43.5).isActive = true
-        opponentsStackView.centerXAnchor.constraint(equalTo: cardView.centerXAnchor, constant: 0).isActive = true
-        
-        leagueStackView.translatesAutoresizingMaskIntoConstraints = false
-        leagueStackView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 15).isActive = true
-        leagueStackView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -8).isActive = true
-        
-        separatorView.translatesAutoresizingMaskIntoConstraints = false
-        separatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        separatorView.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 0).isActive = true
-        separatorView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: 0).isActive = true
-        separatorView.bottomAnchor.constraint(equalTo: cardView.bottomAnchor, constant: -32).isActive = true
-        
-        timeView.translatesAutoresizingMaskIntoConstraints = false
-        timeView.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 0).isActive = true
-        timeView.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: 0).isActive = true
-        timeView.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        configureLeagueImageViewConstraints()
+        configureOpponentsImageViewConstraints()
+        configureOpponentsStackViewConstraints()
+        configureLeagueStackViewConstraints()
+        configureSeparatorViewConstraints()
+        configureTimeViewConstraints()
         
         cardView.translatesAutoresizingMaskIntoConstraints = false
         cardView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 0).isActive = true
